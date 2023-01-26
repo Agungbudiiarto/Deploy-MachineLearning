@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TPDM-1</title>
   </head>
+  <script></script>
   <body>
     <div class="container contact-form">
       <div class="contact-image">
@@ -30,6 +31,7 @@
                 name="txtName"
                 class="form-control"
                 placeholder="Nama Karyawan"
+                id="name"
                 value=""
               />
             </div>
@@ -40,6 +42,7 @@
                 max="5"
                 class="form-control"
                 placeholder="Penilaian Kehadiran"
+                id="nilai1"
                 value=""
               />
             </div>
@@ -50,6 +53,7 @@
                 max="5"
                 class="form-control"
                 placeholder="Penilaian Kedisiplinan"
+                id="nilai2"
                 value=""
               />
             </div>
@@ -60,6 +64,7 @@
                 max="5"
                 class="form-control"
                 placeholder="Penilaian Tanggung Jawab"
+                id="nilai3"
                 value=""
               />
             </div>
@@ -70,6 +75,7 @@
                 max="5"
                 class="form-control"
                 placeholder="Penilaian Attitude"
+                id="nilai4"
                 value=""
               />
             </div>
@@ -80,37 +86,29 @@
                 max="5"
                 class="form-control"
                 placeholder="Penilaian Komunikasi"
+                id="nilai5"
                 value=""
               />
             </div>
             <div class="form-group">
               <input
-                type="submit"
+                type="button"
                 class="btnContact"
                 value="Lihat Hasil"
-                href="#"
+                onclick="data()"
               />
             </div>
           </div>
           <div class="col-md-6">
-            <table><center>
-              <h3 class="text-5xl mb-8" ali>
-                  Prediksi harga emas adalah
-              </h3>
-              <h2 class="text-4xl font-bold">USD {{ Score }}</h2>
-              {% if (Score) != 0 %}
-              <div class="mt-">
-                  <p>A: {{ A }} </p>
-                  <p>B: {{ B }}</p>
-                  <p>C: {{ C }}</p>
-                  <p>D: {{ D }}</p>
-                  <p>E: {{ E }}</p>
-              </div>
-              {% endif %}
+            <h3>Hasil :</h3>
+            <p class="result" id="outputName"></p>
+            <p class="result" id="hasil"></p>
+            <p class="result" id="grade"></p>
           </div>
         </div>
       </form>
     </div>
+    <script src="script.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
